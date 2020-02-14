@@ -1,0 +1,111 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usetheme{Madrid}
+\usepackage{graphicx}
+\graphicspath{{imgs/}}
+
+\title{Разработка ПО для онлайн монитора светимости детектора Belle II}
+\author{Каня К. О. \\
+        Научный руководитель: Ремнев М. А.}
+\institute{Новосибирский Государственный Университет}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Belle II}
+    \begin{itemize}
+        \item superKEKB ассиметричный $e^+e^-$ коллайдер
+        \item Проектная светимость $8\cdot10^{35}$\text{с}$^{-1}$\text{см}$^{-2}$
+        \item Изучение редких распадов B- и D-мезонов
+        \item Поиск новой физики
+    \end{itemize}
+\end{frame}
+
+
+%TODO: ДОБАВИТЬ ИЗОБРАЖЕНИЕ LOM
+\begin{frame}
+\frametitle{Онлайн монитор светимости (LOM)}
+Разработан в институте ядерной физики
+    \begin{itemize}
+        \item Измеряет скорость счета $e^+e^-$ рассеяния с электромагнитного калориметра
+        \item Контроль процесса набора данных и количества набранных данных
+        \item Отслеживание работы ускорителя
+    \end{itemize}
+    \includegraphics[width=\textwidth]{LOM_picture}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Задачи}
+    Разработать ПО которое обеспечит:
+    \begin{itemize}
+        \item первичную проверку качества
+        \item архивирование данных
+        \item отображение данных
+        \item передачу данных
+    \end{itemize}
+\end{frame}
+
+%TODO: УЛУЧШИТЬ КАЧЕСТВО КАРТИНКИ
+\begin{frame}
+\frametitle{Архитектура ПО}
+\includegraphics[width=\textwidth]{Architecture_Scheme.jpg}
+\end{frame}
+
+%TODO: ДОБАВИТЬ ГРАФИКИ СВЕТИМОСТЕЙ
+\begin{frame}
+\frametitle{Интегральная светимость}
+    \begin{itemize}
+        \item Контроль набора данных
+        \item Отслеживание корректности работы ускорителя
+        \item Различные промежутки времени
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Максимальное значение светимостей}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Восстановление при перезапуске}
+    Использовалась БД sqlite3
+    \begin{itemize}
+        \item Сохранение значений светимости и дата последней модификации?
+        \item Сохранение значений светимости с предыдущих заходов
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Пьедесталы}
+    \begin{itemize}
+        \item Отслеживание работы калориметра
+        \item Обнаружение зашумленных каналов
+    \end{itemize}
+    \includegraphics[width=\textwidth]{Pedestal.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{GUI}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Автоматизация калибровки LOM}
+    \begin{itemize}
+        \item Расширен протокол управления монитором светимости
+            \begin{itemize}
+                \item Параллельно устанавливать конфигурацию монитора и калориметра и управлять чтением данных с соответствующих модулей
+            \end{itemize}
+        \item Калибровочные коэффициенты перенесены в БД
+    \end{itemize}
+\end{frame}
+
+\end{document}
+
