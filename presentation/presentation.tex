@@ -10,6 +10,28 @@
         Научный руководитель: Ремнев М. А.}
 \institute{Новосибирский Государственный Университет}
 
+
+
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}Каня Кирилл, НГУ
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}Разработка ПО для LOM
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+
 \begin{document}
 
 \begin{frame}
@@ -55,7 +77,7 @@
 %TODO: УЛУЧШИТЬ КАЧЕСТВО КАРТИНКИ
 \begin{frame}
 \frametitle{Архитектура ПО}
-\includegraphics[width=\textwidth]{Architecture_Scheme.jpg}
+\includegraphics[width=\textwidth]{Architecture.png}
 \end{frame}
 
 %TODO: ДОБАВИТЬ ГРАФИКИ СВЕТИМОСТЕЙ
@@ -104,6 +126,16 @@
                 \item Параллельно устанавливать конфигурацию монитора и калориметра и управлять чтением данных с соответствующих модулей
             \end{itemize}
         \item Калибровочные коэффициенты перенесены в БД
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Заключение}
+    \begin{itemize}
+        \item Увеличена стабильность ПО
+        \item Добавлен расчет интегральных и максимальных светимостей, значений пьедесталов
+        \item GUI
+        \item Усовершенствован процесс калибровки LOM
     \end{itemize}
 \end{frame}
 
