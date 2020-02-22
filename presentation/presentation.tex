@@ -41,28 +41,46 @@
 \begin{frame}
 \frametitle{Belle II}
     \begin{itemize}
-        \item superKEKB ассиметричный $e^+e^-$ коллайдер
+        \item superKEKB $e^+e^-$ коллайдер ($E_{e^-}=7$ГэВ, $E_{e^+}=4$ГэВ)
         \item Проектная светимость $8\cdot10^{35}$\text{с}$^{-1}$\text{см}$^{-2}$
         \item Изучение редких распадов B- и D-мезонов
         \item Поиск новой физики
     \end{itemize}
+    \includegraphics[width=\textwidth]{SuperKEKB_BelleII.jpg}
 \end{frame}
 
+\begin{frame}
+\frametitle{Электромагнитный калориметр ECL}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item 8736 \textit{CsI} кристаллов
+                \item Регистрация фотонов и электронов
+                \item 20 МэВ - 8 ГэВ
+                \item Определение энергии
+                \item Светимость онлайн/офлайн
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\textwidth]{ECL}
+        \end{column}
+    \end{columns}
+\end{frame}
 
 %TODO: ДОБАВИТЬ ИЗОБРАЖЕНИЕ LOM
 \begin{frame}
 \frametitle{Онлайн монитор светимости (LOM)}
 Разработан в институте ядерной физики
     \begin{itemize}
-        \item Измеряет скорость счета $e^+e^-$ рассеяния с электромагнитного калориметра
-        \item Контроль процесса набора данных и количества набранных данных
+        \item Измеряет скорость счета $e^+e^-$ рассеяния с ECL
+        \item Контроль процесса набора данных
         \item Отслеживание работы ускорителя
     \end{itemize}
     \includegraphics[width=\textwidth]{LOM_picture}
 \end{frame}
 
 
-
+%переписать
 \begin{frame}
 \frametitle{Задачи}
     Разработать ПО которое обеспечит:
@@ -77,12 +95,15 @@
 %TODO: УЛУЧШИТЬ КАЧЕСТВО КАРТИНКИ
 \begin{frame}
 \frametitle{Архитектура ПО}
+    \begin{itemize}
+        \item Python 2.7 + библиотека pythonIOC (EPICS PV)
+    \end{itemize}
 \includegraphics[width=\textwidth]{Architecture.png}
 \end{frame}
 
 %TODO: ДОБАВИТЬ ГРАФИКИ СВЕТИМОСТЕЙ
 \begin{frame}
-\frametitle{Интегральная светимость}
+\frametitle{Интегральная и максимальная светимости}
     \begin{itemize}
         \item Контроль набора данных
         \item Отслеживание корректности работы ускорителя
@@ -90,10 +111,6 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Максимальное значение светимостей}
-
-\end{frame}
 
 \begin{frame}
 \frametitle{Восстановление при перезапуске}
