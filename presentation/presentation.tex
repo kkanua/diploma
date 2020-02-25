@@ -13,17 +13,18 @@
 
 
 \makeatletter
+
 \setbeamertemplate{footline}
 {
   \leavevmode%
   \hbox{%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-    \usebeamerfont{author in head/foot}Каня Кирилл, НГУ
+  %\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+  %  \usebeamerfont{author in head/foot}Каня Кирилл, НГУ
+  %\end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{title in head/foot}%
+    \usebeamerfont{title in head/foot} kania.kirill@gmail.com
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-    \usebeamerfont{title in head/foot}Разработка ПО для LOM
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
     \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
     \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
   \end{beamercolorbox}}%
@@ -67,7 +68,6 @@
     \end{columns}
 \end{frame}
 
-%TODO: ДОБАВИТЬ ИЗОБРАЖЕНИЕ LOM
 \begin{frame}
 \frametitle{Онлайн монитор светимости (LOM)}
 Разработан в институте ядерной физики
@@ -92,7 +92,6 @@
     \end{itemize}
 \end{frame}
 
-%TODO: УЛУЧШИТЬ КАЧЕСТВО КАРТИНКИ
 \begin{frame}
 \frametitle{Архитектура ПО}
     \begin{itemize}
@@ -104,11 +103,18 @@
 %TODO: ДОБАВИТЬ ГРАФИКИ СВЕТИМОСТЕЙ
 \begin{frame}
 \frametitle{Интегральная и максимальная светимости}
-    \begin{itemize}
-        \item Контроль набора данных
-        \item Отслеживание корректности работы ускорителя
-        \item Различные промежутки времени
-    \end{itemize}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Контроль набора данных
+                \item Отслеживание корректности работы ускорителя
+                \item Различные промежутки времени
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\textwidth]{Int_lum.jpeg}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 
@@ -132,7 +138,7 @@
 
 \begin{frame}
 \frametitle{GUI}
-
+    \includegraphics[width=\textwidth]{GUI3}
 \end{frame}
 
 \begin{frame}
