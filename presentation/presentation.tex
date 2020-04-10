@@ -82,24 +82,14 @@
 %переписать
 \begin{frame}
 \frametitle{Задачи}
-    \begin{columns}
-    \begin{column}{0.5\textwidth}
-    Разработать ПО которое обеспечит:
-      \begin{itemize}
-          \item первичную проверку качества
-          \item архивирование данных
-          \item отображение данных
-          \item передачу данных
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-    Требования к ПО:
-    \begin{itemize}
-      \item Обработка данных раз в секунду
-      \item Отказоустойчивость
-    \end{itemize}
-    \end{column}
-    \end{columns}
+Разработать ПО которое обеспечит:
+  \begin{itemize}
+    \item Первичную проверку качества
+    \item Архивирование данных
+    \item Отображение данных
+    \item Передачу данных
+    \item Отказоустойчивость
+  \end{itemize}
 \end{frame}
 
 % Убрать картинку со старой версией ПО, добавить картинку с диаграмой считывающего данные софта
@@ -107,19 +97,23 @@
 \frametitle{Архитектура ПО}
     \begin{itemize}
         \item Python 2.7 + библиотека pythonIOC (EPICS PV)
+        \item ПО было существенно расширено и оптимизировано 
+        \\~\\
     \end{itemize}
-\includegraphics[width=\textwidth]{Architecture.png}
+%\includegraphics[width=\textwidth]{Architecture.png}
+\includegraphics[width=\textwidth]{LOM_software.png}
 \end{frame}
 
 %TODO: ДОБАВИТЬ ГРАФИКИ СВЕТИМОСТЕЙ
 \begin{frame}
-\frametitle{Система медленного контроля}
+\frametitle{Система медленного контроля EPICS}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{itemize}
                 \item Контроль набора данных
                 \item Отслеживание корректности работы ускорителя
                 \item Различные промежутки времени
+                \item Создано 54 PV для значений светимостей/пьедесталов и других параметров с LOM
             \end{itemize}
         \end{column}
         \begin{column}{0.5\textwidth}
@@ -135,7 +129,7 @@
     \begin{itemize}
         \item Сохранение значений светимости и дата последней модификации
         \item Сохранение значений светимости с предыдущих заходов
-        \item 
+        \item Остановка чтения данных с монитора светимости при некорректных значениях заходов
     \end{itemize}
 \end{frame}
 
