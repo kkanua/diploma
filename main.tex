@@ -6,8 +6,8 @@
 
 \input{sections/preamble.tex}
 
-\title{Разработка ПО для онлайн монитора светимости детектора Belle II}
-\author{Каня Кирилл\\Новосибирский Государствнный Университет}
+\let\stdsection\section
+\renewcommand\section{\newpage\stdsection}
 
 \begin{document}
 %\maketitle
@@ -38,26 +38,29 @@
     \input{sections/daq.tex}
     \subsection{Система медленного контроля}
     \input{sections/slowControl.tex}
+
 \section{Анализ требований к ПО}
     \subsection{Сценарии использования}
     \input{sections/aim.tex}
-    \subsection{Передаваемая информация}
-    \input{sections/data.tex}
+    %\subsection{Передаваемая информация}
+    %\input{sections/data.tex}
     \subsection{Архитектура ПО}
     \input{sections/arch.tex}
     \subsection{Требования к ПО}
     \input{sections/requirements.tex}
+
 \section{Реализация ПО для онлайн монитора светимости}
-    \subsection{Архитектура ПО}
-    \input{sections/arch.tex}
+%    \subsection{Архитектура ПО}
+%    \input{sections/arch.tex}
     \subsection{Интегральные и максимальные значения светимостей}
     \input{sections/luminosities.tex}
     \subsection{Расчет пьедесталов}
     \input{sections/pedestals.tex}
     \subsection{Графический интерфейс}
     \input{sections/gui.tex}
-    \subsection{Калибровка онлайн монитора светимости}
+    \subsection{Автоматизация энергетической калибровки LOM}
     \input{sections/calibration.tex}
+
 \section*{Заключение}
 \addcontentsline{toc}{section}{Заключение}
     В рамках данной работы было улучшено ПО для онлайн монитора светимости:
