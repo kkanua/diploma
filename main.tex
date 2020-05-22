@@ -1,5 +1,5 @@
-\documentclass[a4paper, 12pt]{article}
-%\documentclass[a4paper, 14pt]{extarticle}
+%\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 14pt]{extarticle}
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
 \usepackage{indentfirst}
@@ -8,15 +8,15 @@
 
 \let\stdsection\section
 \renewcommand\section{\newpage\stdsection}
+\usepackage[center]{caption}
 
 \begin{document}
 %\maketitle
 \input{sections/title.tex}
-\newpage
+%\newpage
 
-\section*{Аннотация}
-Здесь будет аннотация
-\newpage
+%\clearpage
+\setcounter{page}{2}
 
 \tableofcontents
 \newpage
@@ -60,7 +60,6 @@
     \input{sections/gui.tex}
     \subsection{Автоматизация энергетической калибровки LOM}
     \input{sections/calibration.tex}
-
 \section*{Заключение}
 \addcontentsline{toc}{section}{Заключение}
     В рамках данной работы было улучшено ПО для онлайн монитора светимости:
