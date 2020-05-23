@@ -7,3 +7,5 @@ notes
 *.nav
 *.out
 *.snm
+*.bbl
+*.blg
